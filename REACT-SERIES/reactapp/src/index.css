@@ -1,0 +1,55 @@
+
+/* activity 3 css */
+
+/* .container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+
+.card{
+    background-color: black;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+
+}
+
+
+h1{
+    text-align: center;
+    color: #e7e0e0;
+    margin: 0 0 1.5em;
+    text-decoration: underline;
+  
+}
+
+.rotate {
+    background-color: rgb(54, 115, 169);
+    height: 300px;
+    width: 200px;
+    display: block;
+    animation: rotating 4s linear infinite;
+
+}
+
+@keyframes rotating{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    0%{
+        transform: rotate(360deg);
+    }
+} */
