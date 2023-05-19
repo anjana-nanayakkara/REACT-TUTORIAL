@@ -243,26 +243,93 @@
 
 // -------------components------------
 
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+// // import Component1 from "./Component1";
+
+// import App from "./App";
+
+// ReactDOM.render(
+//     <>
+//         <h1>Components</h1>
+
+//         <App/>
+
+//         {/* <Component1></Component1> 
+
+//         //component1 was deleted
+
+//         <Component1/> */}
+
+//     </>,
+
+//     document.getElementById("root")
+// );
+
+
+// ------------------practicr problem 4-----------------
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+
+// import App from "./App";
+
+// ReactDOM.render(
+//     <>
+//         <App/>
+//     </>,
+    
+//     document.getElementById("root")
+// );
+
+
+// -----------------project 1----------------
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+// import App from "./App";
+
+// ReactDOM.render(
+//   <>
+//     <App />
+//   </>,
+
+//   document.getElementById("root")
+// );
+
+
+// --------------------props-------------------
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import App from "./App";
+
+// ReactDOM.render(
+//   <>
+//     <App />
+    
+//   </>,
+
+//   document.getElementById("root")
+// );
+
+// -----------------hooks------------------
+
+
 import React from "react";
 import ReactDOM from "react-dom";
-
-// import Component1 from "./Component1";
-
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 
 ReactDOM.render(
-    <>
-        <h1>Components</h1>
+  <>
+    <App />
+  </>,
 
-        <App/>
-
-        {/* <Component1></Component1> 
-
-        //component1 was deleted
-
-        <Component1/> */}
-
-    </>,
-
-    document.getElementById("root")
+  document.getElementById("root")
 );

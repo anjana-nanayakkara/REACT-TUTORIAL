@@ -53,3 +53,77 @@ h1{
         transform: rotate(360deg);
     }
 } */
+
+
+/* ----------------project 2------------------- */
+/* 
+.container{
+    max-width: 800px;
+    margin: 10px auto;
+    
+
+}
+
+.heading{
+    text-align: center;
+    font-family: 'Stylish', sans-serif;
+    font-size: 40px;
+    margin-bottom: 1em;
+
+}
+
+.hotelCards{
+    width: 100%;
+    margin: 20px;
+    border: #000000 solid ;
+    margin: 1em;
+}
+
+.hotelCards img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.title{
+    margin: 3em 0;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Stylish', sans-serif;
+    color: #860000;
+    text-decoration: underline;
+
+
+
+}
+
+
+
+.hotelCards p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.btn{
+    margin-bottom: 5px;
+    padding: 20px;
+
+}
+
+button{
+    padding: 5px 40px;
+    border: 1px solid palevioletred;
+    font-size: 18px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.4s all ease;
+    margin-bottom: 5px;
+
+}
+
+
+button:hover{
+    background-color: #ba0000;
+} */
