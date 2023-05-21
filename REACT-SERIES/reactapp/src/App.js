@@ -624,54 +624,649 @@
 
 // export default App;
 
-import React, { useState } from 'react'
-import'./index.css'
+
+
+// ---------------react forms and hooks------------------
+
+// import React, { useState } from 'react'
+// import'./index.css'
+
+// const App = () => {
+
+//   const [myname,setMyname]=useState("");
+//   const [mobile,setMobile]=useState("");
+//   const [newEntry,setNewentry]=useState([]);
+
+//   const myData=(e)=>{
+//     setMyname(e.target.value);
+//   }
+
+//   const submitData=(e)=>{
+//     e.preventDefault();
+//     const newData={myname:myname,mobile:mobile};
+//     setNewentry([...newEntry,newData]);
+//     setMyname("");
+//     setMobile("");
+
+//   }
+//   return (
+//     <>
+//       <div className="container my-5 text-center">
+//         <form onSubmit={submitData}>
+
+//           <div>
+//             <input type="text" placeholder="Enter your name" className="w-50 my-3 py-1" value={myname} onChange={myData}/>
+//           </div>
+
+//           <div>
+//             <input type="text" placeholder="Enter your name" className="w-50 my-3 py-1" value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
+//           </div>
+//           <button className='btn btn-dark' type="submit">Submit</button>
+//         </form>
+//         <div className='my-3'>
+//           {newEntry.map((values)=>{
+//             return (
+//               <>
+//                 <h2>{values.myname}</h2>
+//                 <h2>{values.mobile}</h2>
+//               </>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default App
+
+
+
+// ------------------forms with validation-----------------------
+
+// import React, { useState } from "react";
+// import "./index.css";
+
+// const App = () => {
+//   const [myname, setMyname] = useState("");
+//   const [mobile, setMobile] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [newEntry, setNewentry] = useState([]);
+
+//   const myData = (e) => {
+//     setMyname(e.target.value);
+//   };
+
+//   const submitData = (e) => {
+//     e.preventDefault();
+//     // const time=newDate
+//     if(myname && mobile && email && password){
+//       const newData = { myname,mobile,email,password};
+//       setNewentry([...newEntry, newData]);
+//       setMyname("");
+//       setMobile("");
+//       setEmail("");
+//       setPassword("");
+//     }else{
+//       alert("please fill data")
+//     }
+//   }
+//   return (
+//     <>
+//       <div className="container my-5 text-center">
+//         <form onSubmit={submitData}>
+//           <div>
+//             <input
+//               type="text"
+//               placeholder="Enter your name"
+//               className="w-50 my-3 py-1"
+//               value={myname}
+//               onChange={myData}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               type="text"
+//               placeholder="Enter your mobile"
+//               className="w-50 my-3 py-1"
+//               value={mobile}
+//               onChange={(e) => setMobile(e.target.value)}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               type="text"
+//               placeholder="Enter your email"
+//               className="w-50 my-3 py-1"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               type="text"
+//               placeholder="Enter your password"
+//               className="w-50 my-3 py-1"
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//             />
+//           </div>
+//           <button className="btn btn-dark" type="submit">
+//             Submit
+//           </button>
+//         </form>
+//         <div className="my-3">
+//           {newEntry.map((values) => {
+//             return (
+//               <>
+//                 <h2>My name is {values.myname}</h2>
+//                 <h2>My mobile no is {values.mobile}</h2>
+//                 <h2>My email is {values.email}</h2>
+//                 <h2>My password is {values.password}</h2>
+//               </>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+// ------------------more validation-----------------------
+
+// import React, { useState } from "react";
+// import "./index.css";
+
+// const App = () => {
+//   // const [myname, setMyname] = useState("");
+//   // const [mobile, setMobile] = useState("");
+//   // const [email, setEmail] = useState("");
+//   // const [password, setPassword] = useState("");
+//   const [newEntry, setNewentry] = useState({
+//     myname:"",
+//     email:"",
+//     mobile:"",
+//     password:""
+//   });
+
+
+//   const inputdata=(e)=>{
+//     e.preventDefault();
+//     const name=e.target.name;
+//     const value=e.target.value;
+//     setNewentry((previousData)=>{
+//       if (name == "myname") {
+//         return {
+//           myname: value,
+//           mobile: previousData.mobile,
+//           email: previousData.email,
+//           password: previousData.password,
+//         };
+//       } else if (name == "email") {
+//         return {
+//           myname: previousData.name,
+//           mobile: previousData.mobile,
+//           email: value,
+//           password: previousData.password,
+//         };
+//       } else if (name == "password") {
+//         return {
+//           myname: previousData.name,
+//           mobile: previousData.mobile,
+//           email: previousData.email,
+//           password: value,
+//         };
+//       } else if (name == "mobile") {
+//         return {
+//           myname: previousData.name,
+//           mobile: value,
+//           email: previousData.email,
+//           password: previousData.password,
+//         };
+//       }
+//     })
+//   }
+//   // const myData = (e) => {
+//   //   setMyname(e.target.value);
+//   // };
+
+//   // const submitData = (e) => {
+//   //   e.preventDefault();
+//   //   // const time=newDate
+//   //   if(myname && mobile && email && password){
+//   //     const newData = { myname,mobile,email,password};
+//   //     setNewentry([...newEntry, newData]);
+//   //     setMyname("");
+//   //     setMobile("");
+//   //     setEmail("");
+//   //     setPassword("");
+//   //   }else{
+//   //     alert("please fill data")
+//   //   }
+//   // }
+//   return (
+//     <>
+//       <div className="container my-5 text-center">
+//         <form>
+//           <div>
+//             <input
+//               name="myname"
+//               type="text"
+//               placeholder="Enter your name"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.myname}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="mobile"
+//               type="text"
+//               placeholder="Enter your mobile"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.mobile}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="email"
+//               type="text"
+//               placeholder="Enter your email"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.email}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="password"
+//               type="text"
+//               placeholder="Enter your password"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.password}
+//               onChange={inputdata}
+//             />
+//           </div>
+//           <button className="btn btn-dark" type="submit">
+//             Submit
+//           </button>
+//         </form>
+
+//         <h2>{newEntry.myname}</h2>
+//         <h2>{newEntry.mobile}</h2>
+//         <h2>{newEntry.email}</h2>
+//         <h2>{newEntry.password}</h2>
+//         {/* <div className="my-3">
+//           {newEntry.map((values) => {
+//             return (
+//               <>
+//                 <h2>My name is {values.myname}</h2>
+//                 <h2>My mobile no is {values.mobile}</h2>
+//                 <h2>My email is {values.email}</h2>
+//                 <h2>My password is {values.password}</h2>
+//               </>
+//             );
+//           })}
+//         </div> */}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+// -------------reduce code-------------
+
+
+// import React, { useState } from "react";
+// import "./index.css";
+
+// const App = () => {
+
+//   const [newEntry, setNewentry] = useState({
+//     myname: "",
+//     email: "",
+//     mobile: "",
+//     password: "",
+//   });
+
+//   const inputdata = (e) => {
+//     e.preventDefault();
+//     const name = e.target.name;
+//     const value = e.target.value;
+//     setNewentry((previousData) => {
+//       return {
+//         ...previousData,
+//         [name]: value,
+//       };
+//     });
+//   };
+
+//   return (
+//     <>
+//       <div className="container my-5 text-center">
+//         <form>
+//           <div>
+//             <input
+//               name="myname"
+//               type="text"
+//               placeholder="Enter your name"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.myname}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="mobile"
+//               type="text"
+//               placeholder="Enter your mobile"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.mobile}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="email"
+//               type="text"
+//               placeholder="Enter your email"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.email}
+//               onChange={inputdata}
+//             />
+//           </div>
+
+//           <div>
+//             <input
+//               name="password"
+//               type="text"
+//               placeholder="Enter your password"
+//               className="w-50 my-3 py-1"
+//               value={newEntry.password}
+//               onChange={inputdata}
+//             />
+//           </div>
+//           <button className="btn btn-dark" type="submit">
+//             Submit
+//           </button>
+//         </form>
+
+//         <h2>{newEntry.myname}</h2>
+//         <h2>{newEntry.mobile}</h2>
+//         <h2>{newEntry.email}</h2>
+//         <h2>{newEntry.password}</h2>
+        
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+// -----------------why we use contex API -------------------
+
+
+// import React from 'react'
+// import A from './Components/A'
+
+
+// const App = () => {
+//   return (
+//     <>
+//     <h1>parent compenent</h1>
+//     <A myname="Anjana"></A>
+    
+    
+//     </>
+//   )
+// }
+
+// export default App;
+
+// ---------------context api-----------------
+
+// import React from "react";
+// import C from "./Components/C";
+// import B from "./Components/B";
+
+// const App = () => {
+//   return (
+//     <>
+//       <h1>parent compenent</h1>
+//       <C/>
+//       {/* <B/> */}
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+// -----------------use effect hook------------------
+
+// import React, { useEffect, useState } from "react";
+
+// const App = () => {
+//   const [data,setData]=useState("Good morning");
+//   const changeData=(()=>{
+//     setData("Good evening")
+//   })
+
+//   useEffect(()=>{
+//     console.log(" in console");
+//   })
+
+
+//   return (
+//     <>
+//       <h1>{data}</h1>
+//       <button className="btn btn-dark" onClick={changeData}>Click me</button>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+// --------------------project-----------------
+
+// import React,{useState} from 'react'
+// import Friends from './Components/Friends';
+
+// const Data = [
+//   {
+//     id: 1,
+//     name: "khanam",
+//   },
+//   {
+//     id: 2,
+//     name: "seema",
+//   },
+//   {
+//     id: 3,
+//     name: "rohi",
+//   },
+//   {
+//     id: 4,
+//     name: "www",
+//   },
+//   {
+//     id: 5,
+//     name: "mahio",
+//   },
+// ];
+
+
+// const App = () => {
+//   const [friend,setFriend]=useState(Data);
+//   return (
+//     <>
+//       <h1>Number of friends : {friend.length}</h1>
+
+//       <Friends friends={friend}/>
+//       <button onClick={()=>setFriend([])} className='btn btn-dark mx-3'>clear all</button>
+//       <button onClick={()=>setFriend(Data)} className='btn btn-dark mx-3'>get all</button>
+//     </>
+//   );
+// }
+
+// export default App
+
+
+
+// --------------useefect project---------------
+
+// import React,{useEffect,useState} from 'react'
+
+// const App = () => {
+//   const [number,setNumber]=useState(0);
+//   useEffect(()=>{
+//     document.title=`u have ${number} messages`;
+//   })
+//   return (
+//     <>
+//     <h1>number of masseges {number}</h1>
+//     <button className='btn btn-dark mx-3' onClick={()=>setNumber(number+1)}>click me</button>
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
+// ---------fetching apis-----------
+
+// import React,{useEffect,useState} from 'react'
+
+// const App = () => {
+
+//   const[fake,setFake]=useState([]);
+//   console.log(fake)
+//   useEffect(()=>{
+//     const fakestore = async () => {
+//       const response = await fetch("https://fakestoreapi.com/products");
+//       // console.log(response);
+//       const jsonData = await response.json();
+//       // console.log(jsonData);
+//       setFake(jsonData);
+//     };
+//     fakestore();
+//   },[])
+
+  // const fakestore=async()=>{
+  //   const response = await fetch("https://fakestoreapi.com/products");
+  //   console.log(response)
+  //   const jsonData=await response.json();
+  //   console.log(jsonData)
+  //   setFake(jsonData)
+  // }
+
+  // fakestore();
+//   return (
+//     // https://fakestoreapi.com/products
+//     <>
+//     <h2>Fake api store</h2>
+//     <div className='container'>
+//       {fake.map((values)=>{
+//         return (
+//           <>
+//             <div className="box">
+//               <div className="content">
+//                 <h5>{values.title}</h5>
+//                 <p>{values.description}</p>
+//               </div>
+//               <img src={values.image} style={width:300px,height:300px} />
+//               {/* <img src='' alt=''/> */}
+//             </div>
+//           </>
+//         );
+//       })}
+      
+//     </div>
+//     </>
+//   )
+// }
+
+// export default App
+
+// -------------------react routers---------------
+
+// import React from 'react'
+// import { Link,Routes,Route } from 'react-router-dom'
+// import Home from './Components/Home'
+// import About from './Components/About'
+
+
+// const App = () => {
+//   return (
+//     <>
+      // <ul>
+      //   <Link to="/">
+      //     <li>Home</li>
+      //   </Link>
+      //   <Link to="/about">
+      //     <li>About</li>
+      //   </Link>
+      // </ul>
+//       <Routes>
+//         <Route exact path="/" Component={Home}></Route>
+//         <Route exact path="/about" Component={About}></Route>
+//       </Routes>
+//     </>
+//   );
+// }
+
+// export default App
+
+// ------------------routing navbar-----------------
+
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Services from "./Components/Services";
+import Contact from "./Components/Contact";
 
 const App = () => {
-
-  const [myname,setMyname]=useState("");
-  const [mobile,setMobile]=useState("");
-  const [newEntry,setNewentry]=useState([]);
-
-  const myData=(e)=>{
-    setMyname(e.target.value);
-  }
-
-  const submitData=(e)=>{
-    e.preventDefault();
-    const newData={myname:myname,mobile:mobile};
-    setNewentry([...newEntry,newData]);
-    setMyname("");
-    setMobile("");
-
-  }
   return (
     <>
-      <div className="container my-5 text-center">
-        <form onSubmit={submitData}>
-
-          <div>
-            <input type="text" placeholder="Enter your name" className="w-50 my-3 py-1" value={myname} onChange={myData}/>
-          </div>
-
-          <div>
-            <input type="text" placeholder="Enter your name" className="w-50 my-3 py-1" value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
-          </div>
-          <button className='btn btn-dark' type="submit">Submit</button>
-        </form>
-        <div className='my-3'>
-          {newEntry.map((values)=>{
-            return (
-              <>
-                <h2>{values.myname}</h2>
-                <h2>{values.mobile}</h2>
-              </>
-            );
-          })}
-        </div>
+      <div>
+        <Navbar>
+          <Routes>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/about" component={About}></Route>
+            <Route exact path="/contact" component={Contact}></Route>
+            <Route exact path="/services" component={Services}></Route>
+          </Routes>
+        </Navbar>
       </div>
     </>
   );
-}
+};
 
-export default App
+export default App;
+

@@ -341,14 +341,77 @@
 //----------------1st froject-------------------
 
 
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import App from "./App";
+
+// ReactDOM.render(
+//   <>
+//     <App />
+//   </>,
+
+//   document.getElementById("root")
+// );
+
+
+// ---------------context api----------------
+
+// import React,{createContext} from "react";
+// import ReactDOM from "react-dom";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import App from "./App";
+
+// const Language = createContext();
+// const Frontend = createContext();
+
+
+
+// ReactDOM.render(
+//   <>
+//     <Language.Provider value={"reactjs"}>
+//       <Frontend.Provider value="html">
+//         <App />
+//       </Frontend.Provider>
+//     </Language.Provider>
+//   </>,
+
+//   document.getElementById("root")
+// );
+
+// export {Language,Frontend};
+
+
+
+// --------------useeffect hook--------------
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import App from "./App";
+
+// ReactDOM.render(
+//   <>
+//     <App />
+//   </>,
+
+//   document.getElementById("root")
+// );
+
+
+
+// --------------router---------------
+
 import React from "react";
 import ReactDOM from "react-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </>,
 
   document.getElementById("root")
