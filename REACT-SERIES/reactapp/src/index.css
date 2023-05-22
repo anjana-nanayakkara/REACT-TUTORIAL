@@ -127,3 +127,32 @@ button{
 button:hover{
     background-color: #ba0000;
 } */
+
+
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 80px;
+    margin: 0 20px;
+}
+
+.carousel-item img{
+    height: 650px;
+    object-fit: cover;
+}
+
+.card-img-top{
+    height: 200px;
+}
+
+.about{
+    height: 600px;
+    width: 700px;
+}
+
+.active_styles{
+    border-bottom: 2px solid black;
+}

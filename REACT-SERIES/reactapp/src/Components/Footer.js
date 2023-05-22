@@ -38,3 +38,29 @@
 // };
 
 // export default Footer;
+
+
+//--------------responsive website------------
+
+import React from 'react'
+import { NavLink } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <>
+      <div class="card text-center">
+        
+        <div class="card-body bg-dark text-light">
+          <h5 class="card-title">react project</h5>
+          <p class="card-text">
+            anjana nanayakkara
+          </p>
+          <NavLink exact to="/"><button className='btn btn-primary'>Home Page</button></NavLink>
+        </div>
+        
+      </div>
+    </>
+  );
+}
+
+export default Footer

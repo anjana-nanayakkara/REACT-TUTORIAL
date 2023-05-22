@@ -1242,31 +1242,67 @@
 // ------------------routing navbar-----------------
 
 
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
+// import Home from "./Components/Home";
+// import About from "./Components/About";
+// import Services from "./Components/Services";
+// import Contact from "./Components/Contact";
+
+// const App = () => {
+//   return (
+//     <>
+//       <div>
+//         <Navbar>
+//           <Routes>
+//             <Route exact path="/" Component={Home}></Route>
+//             <Route exact path="/about" component={About}></Route>
+//             <Route exact path="/contact" component={Contact}></Route>
+//             <Route exact path="/services" component={Services}></Route>
+//           </Routes>
+//         </Navbar>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+//--------------responsive website------------
+
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Navbar from './Components/Navbar';
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
+import Footer from './Components/Footer';
+import Error from './Components/Error';
+import Signin from './Components/Signin';
 
 const App = () => {
   return (
-    <>
-      <div>
-        <Navbar>
-          <Routes>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/about" component={About}></Route>
-            <Route exact path="/contact" component={Contact}></Route>
-            <Route exact path="/services" component={Services}></Route>
-          </Routes>
-        </Navbar>
-      </div>
-    </>
-  );
-};
+    <div>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" Component={Home}></Route>
+        <Route exact path="/about" Component={About}></Route>
+        <Route exact path="/contact" Component={Contact}></Route>
+        <Route exact path="/services" Component={Services}></Route>
 
-export default App;
+        <Route exact path="/signin/:username" Component={Signin}></Route>
+        <Route path="*" Component={Error}></Route>
+      </Routes>
+      {/* <Error></Error> */}
+      <Footer />
+    </div>
+  );
+}
+
+export default App
 
